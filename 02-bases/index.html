@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bases de vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <h1>Hola mundo</h1>
+
+    <div id="app">
+        <h1>Batman quotes</h1>
+        <input type="text" v-model="newQuote" 
+                v-on:Keypress.enter="addQuote"
+        /> <br>
+        <small>{{ newQuote }}</small>
+        <hr>
+        <ul>
+            <li v-for="({quote, author}, index) in quotes">
+                <span>{{ index + 1 + ".-" }}  {{ quote }}</span>
+                <!-- <blockquote v-if="author" >{{ author }}</blockquote> -->
+                <blockquote v-show="author" >{{ author }}</blockquote>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="app.js" ></script>
 </body>
 </html>

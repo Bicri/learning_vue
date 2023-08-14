@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h1>Hola mundo</h1>
+        <p>{{ 1 + 1 }}</p>
+        <p>{{ message}}</p>
+        <h3>{{ quote }}</h3>
+        <blockquote>{{ author }}</blockquote>
+
+        <button v-on:click="changeQuote" >Change quote</button>
+    </div>
+
+
+    <script src="app.js" ></script>
+</body>
+</html>
